@@ -1,15 +1,10 @@
 # FUNDAMENTALS-1: Design APIs to avoid security concerns
 
 ![Author](https://img.shields.io/badge/Author-Oracle-blue.svg)
-![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
-
-Duplication of code and data causes many problems. Both code and data tend not to be treated consistently when duplicated, e.g., changes may not be applied to all copies.
-
-## Using a good IDE
-
 ![Author](https://img.shields.io/badge/Author-Bart.Devriendt-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171001-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
 
-Using an IDE like IntelliJ can help you avoid these types of problems.  It will indicate you when code is duplicate.  
-It also allows you to easily refactor code to create good API's.
+It is better to design APIs with security in mind. Trying to retrofit security into an existing API is more difficult and error prone. For example, making a class final prevents a malicious subclass from adding finalizers, cloning, and overriding random methods (Guideline 4-5). Any use of the SecurityManager highlights an area that should be scrutinized.
+
 
