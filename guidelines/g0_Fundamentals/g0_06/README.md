@@ -20,5 +20,5 @@ This allows an attacker to modify the fields from outside.  Better is to make th
 
         public class Carpass {
             private final String vinNumber;
-            private BigDecimal mileage;
+            private final BigDecimal mileage;
         }
