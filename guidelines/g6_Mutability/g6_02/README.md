@@ -18,7 +18,7 @@ To create a copy of a trusted mutable object, call a copy constructor or the clo
 
 ![Author](https://img.shields.io/badge/Author-Mattias.De.Wael-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20170930-lightgrey.svg)
-![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 The class ```be.howest.ti.secure.development.g6.g02.Person``` keeps a ```String``` field for a name and a ```Date``` field for the birthday of the person. The method ```isOfAge``` checks if a person is 18 years or older.
