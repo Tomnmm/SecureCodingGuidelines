@@ -1,4 +1,4 @@
-4# FUNDAMENTALS-0: Prefer to have obviously no flaws rather than no obvious flaws [8]
+# FUNDAMENTALS-0: Prefer to have obviously no flaws rather than no obvious flaws [8]
 
 ![Author](https://img.shields.io/badge/Author-Oracle-blue.svg)
 ![Agree](https://img.shields.io/badge/AGREE-4-green.svg)
