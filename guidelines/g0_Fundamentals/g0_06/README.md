@@ -6,7 +6,7 @@ Allocate behaviors and provide succinct interfaces. Fields of objects should be 
 # Attack using Simple Java Code
 ![Author](https://img.shields.io/badge/Author-Bart.Devriendt-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171001-lightgrey.svg)
-![Agree](https://img.shields.io/badge/AGREE-2-green.svg)
+![Agree](https://img.shields.io/badge/AGREE-3-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 The class ```be.howest.ti.secure.development.g0.g06.domain.Carpass``` keeps a public (non-encapsulated) field for both the VIN number and the mileage.  
