@@ -1,4 +1,4 @@
-# FUNDAMENTALS-3: Restrict privileges ![Author](https://img.shields.io/badge/Author-Oracle-blue.svg) ![Agree](https://img.shields.io/badge/AGREE-2-green.svg)
+# FUNDAMENTALS-3: Restrict privileges ![Author](https://img.shields.io/badge/Author-Oracle-blue.svg) ![Agree](https://img.shields.io/badge/AGREE-3-green.svg) ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 Despite best efforts, not all coding flaws will be eliminated even in well reviewed code. However, if the code is operating with reduced privileges, then exploitation of any flaws is likely to be thwarted. The most extreme form of this is known as the principle of least privilege. Using the Java security mechanism this can be implemented statically by restricting permissions through policy files and dynamically with the use of the java.security.AccessController.doPrivileged mechanism (see section 9).
 
