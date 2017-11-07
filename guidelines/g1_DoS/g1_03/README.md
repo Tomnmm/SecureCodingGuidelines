@@ -28,3 +28,12 @@ If performance is not a particular issue, a verbose approach is to use arbitrary
 A peculiarity of two's complement integer arithmetic is that the minimum negative value does not have a matching positive value of the same magnitude. So, Integer.MIN_VALUE == -Integer.MIN_VALUE, Integer.MIN_VALUE == Math.abs(Integer.MIN_VALUE) and, for integer a, a < 0 does not imply -a > 0. The same edge case occurs for Long.MIN_VALUE.
 
 As of Java SE 8, the java.lang.Math class also contains methods for various operations (e.g. addExact, multiplyExact, decrementExact, etc.) that throw an ArithmeticException if the result overflows the given type.
+
+## Attack Using Very Simple Java Code
+
+![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171107-lightgrey.svg)
+
+```checkGrowByUnsafe``` adds ```extra``` to ```current```, causing an overflow when ```extra``` + ```current``` is larger than ```Integer.MAX_VALUE```. When this happens, the value is negative, causing the check to pass even when a large number is entered.
+
+The safe version (```checkGrowBySafe```) prevents this by substracting extra from max and comparing it to current, basically reversing the check.
