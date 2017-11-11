@@ -13,3 +13,16 @@ It is sometimes also necessary to sanitize exceptions containing information der
 Be careful when depending on an exception for security because its contents may change in the future. Suppose a previous version of a library did not include a potentially sensitive piece of information in the exception, and an existing client relied upon that for security. For example, a library may throw an exception without a message. An application programmer may look at this behavior and decide that it is okay to propagate the exception. However, a later version of the library may add extra debugging information to the exception message. The application exposes this additional information, even though the application code itself may not have changed. Only include known, acceptable information from an exception rather than filtering out some elements of the exception.
 
 Exceptions may also include sensitive information about the configuration and internals of the system. Do not pass exception information to end users unless one knows exactly what it contains. For example, do not include exception stack traces inside HTML comments.
+
+## Simple example
+
+![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171111-lightgrey.svg)
+
+The ```Example``` class has 2 methods that try to open a non-existing file.
+
+The ```safe``` method catches the ```FileNotFoundException``` and returns a generic error to the caller. This prevents an attacker from finding out the filesystem layout.
+
+The ```unsafe``` version catches the error and sends it to the caller unmodified. This could allow an attacker to check for file existence and provide the filename that should have been opened.
+
+While the ```safe``` method is safe in the sense that it will not divulge any potentially usefull information to an attacker, it will make debugging the code significantly harder.
