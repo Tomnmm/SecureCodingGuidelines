@@ -18,6 +18,8 @@ Exceptions may also include sensitive information about the configuration and in
 
 ![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171111-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-YES-green.svg)
+
 
 The ```Example``` class has 2 methods that try to open a non-existing file.
 

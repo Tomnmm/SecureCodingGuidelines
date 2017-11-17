@@ -86,11 +86,12 @@ When confirming an object's class type by examining the java.lang.Class instance
 
 ![Author](https://img.shields.io/badge/Author-Manu.DeWitte-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171101-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-YES-green.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
-The package be.howest.ti.secure.development.g4.g05.finalize contains two examples of the behaviour of the finalize method mentioned above. It shows the difference between throwing an exception in a constructor _before_ as opposed to _after_ the super constructor has run. In the latter case the finalize() method will be called, which opens a window for malicious subclasses to get access to the object that was being constructed.
+The package ```be.howest.ti.secure.development.g4.g05.finalize``` contains two examples of the behaviour of the finalize method mentioned above. It shows the difference between throwing an exception in a constructor _before_ as opposed to _after_ the super constructor has run. In the latter case the ```finalize()``` method will be called, which opens a window for malicious subclasses to get access to the object that was being constructed.
 
-The _insecure_ subpackage has the InsecureTrustedClass, which is extended by the UntrustedClass. Run the InsecureTestApp and look at the output. Also take a look at the comments in the code. You should see that the finalize() method _is_ called in this example.
+The _insecure_ subpackage has the InsecureTrustedClass, which is extended by the ```UntrustedClass```. Run the ```InsecureTestApp``` and look at the output. Also take a look at the comments in the code. You should see that the ```finalize()``` method _is_ called in this example.
 
-The _secure_ subpackage has the SecureTrustedClass, which is extended by the FutileUntrustedClass. Run the SecureTestApp and look at the output. You should see that the finalize() method is _not_ called in this case.
+The _secure_ subpackage has the SecureTrustedClass, which is extended by the ```FutileUntrustedClass```. Run the ```SecureTestApp``` and look at the output. You should see that the ```finalize()``` method is _not_ called in this case.

@@ -33,6 +33,8 @@ As of Java SE 8, the java.lang.Math class also contains methods for various oper
 
 ![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171107-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-YES-green.svg)
+
 
 ```checkGrowByUnsafe``` adds ```extra``` to ```current```, causing an overflow when ```extra``` + ```current``` is larger than ```Integer.MAX_VALUE```. When this happens, the value is negative, causing the check to pass even when a large number is entered.
 
