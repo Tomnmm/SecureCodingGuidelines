@@ -1,7 +1,7 @@
 # FUNDAMENTALS-4: Establish trust boundaries
 
 ![Author](https://img.shields.io/badge/Author-Oracle-blue.svg)
-![Agree](https://img.shields.io/badge/AGREE-2-green.svg)
+![Agree](https://img.shields.io/badge/AGREE-4-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 In order to ensure that a system is protected, it is necessary to establish trust boundaries. Data that crosses these boundaries should be sanitized and validated before use. Trust boundaries are also necessary to allow security audits to be performed efficiently. Code that ensures integrity of trust boundaries must itself be loaded in such a way that its own integrity is assured.
@@ -21,3 +21,12 @@ When auditing trust boundaries, there are some questions that should be kept in 
 For the Java fans. If your security manager does not limit the use of reflection, untrusted third-party code may be able 
 to change your private fields. Class be.howest.ti.secure.development.g0.g04.OnePlusOneEqualsFour shows how you change 
 the internal value of an Integer object.
+
+![Author](https://img.shields.io/badge/Author-Rupert.Ovenden-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171020-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+The Java Example will only work with the 256 integers nearest to zero, ranging from -128 to 127, because autoboxing is only applied for those integers.
+
+If you use in the example 200 instead of 1, the example will not work anymore. 
