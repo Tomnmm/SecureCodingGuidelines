@@ -27,6 +27,6 @@ the internal value of an Integer object.
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
-The Java Example will only work with the 256 integers nearest to zero, ranging from -128 to 127, because autoboxing is only applied for those integers.
+The Java Example will only work with the 256 integers nearest to zero (tiny int), ranging from -128 to 127, because autoboxing is only applied for those integers.
 
 If you use in the example 200 instead of 1, the example will not work anymore. 
