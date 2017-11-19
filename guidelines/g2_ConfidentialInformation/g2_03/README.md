@@ -33,15 +33,16 @@ __Function `clearUnsafeSecret`:__
 After usage of the function `unsafe()`, I set the pointer of object `myUnsafeSecret` to `null`. After this happens I run the `Garbage Collection`. This can still fail because of the `String Pool`.   
 
 ### Proof Of Concept
-Run the Java class:   
-![Running of the program](src/be/howest/ti/secure/development/g2/g03/Example01/POC_images/safe5_run_safe.PNG)
+__Run the Java class:__   
+![Running of the program](src/be/howest/ti/secure/development/g2/g03/Example01/POC_images/safe5_run_safe.PNG)   
 
-Searching for the string `SAFE_SECRET`:   
-![Running of the program](src/be/howest/ti/secure/development/g2/g03/Example01/POC_images/safe5_find_secret.PNG)
+__Searching for the string `SAFE_SECRET`:__   
+![Running of the program](src/be/howest/ti/secure/development/g2/g03/Example01/POC_images/safe5_find_secret.PNG)   
+The string `SAFE_SECRET_THAT_SHOULD_NOT_STAY_IN_MEMORY` is not found in memory, but the string `UNSAFE_SECRET_THAT_SHOULD_NOT_STAY_IN_MEMORY` is found.   
 
-Searching for the string `abababababa...`:   
-![Running of the program](src/be/howest/ti/secure/development/g2/g03/Example01/POC_images/safe5_find_aba.PNG)
-
+__Searching for the string `abababababa...`:__   
+![Running of the program](src/be/howest/ti/secure/development/g2/g03/Example01/POC_images/safe5_find_aba.PNG)   
+The string `abababababa...` is found in memory.   
 
 ### Do It Yourself
 >I use `procdump64` and `strings64` form [Sysinternals](https://docs.microsoft.com/en-us/sysinternals/) to create the memory dump and get the strings out of the memory dump.   
