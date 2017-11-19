@@ -37,7 +37,7 @@ Add and edit the following fragment to each README file you create.
 
 ```
 ![Author](https://img.shields.io/badge/Author-Mattias.De.Wael-blue.svg)
-![Date](https://img.shields.io/badge/20170904-lightgrey.svg)
+![Date](https://img.shields.io/badge/Date-20170904-lightgrey.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 ```
