@@ -31,7 +31,11 @@ public class G2_03Example01 {
 
         System.out.printf("Unsafe mode: My secret has %d characters %n" , myUnsafeSecret.length());
 
-        clearUnsafeSecret(myUnsafeSecret);
+//        clearUnsafeSecret(myUnsafeSecret);
+        
+        myUnsafeSecret = null;
+        clearUnsafeSecret();
+
     }
 
     private void clearSafeSecret(char[] pass){
@@ -44,7 +48,16 @@ public class G2_03Example01 {
         System.out.println("Safe wiping: I hope that my safe secret is wiped");
     }
 
-    private void clearUnsafeSecret( String myUnsafeSecret) throws InterruptedException {
+
+    private void clearUnsafeSecret() throws InterruptedException {
+        System.gc();
+
+        Thread.sleep(2000);
+
+        System.out.println("Unsafe wiping: Garbage collection started");
+    }
+
+        private void clearUnsafeSecret( String myUnsafeSecret) throws InterruptedException {
         myUnsafeSecret = null;
 
         while( myUnsafeSecret != null) {
@@ -54,5 +67,4 @@ public class G2_03Example01 {
         System.gc();
         System.out.println("Unsafe wiping: Garbage collection started");
     }
-
 }
