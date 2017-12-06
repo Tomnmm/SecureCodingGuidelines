@@ -13,6 +13,7 @@ However, doing so does have negative consequences. Code quality will be compromi
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
+
 ### Mutable vs Immutable Objects
 
 __immutable objects__ have no fields that can be changed after the object is created. For examples: `String` and `char`.    
@@ -62,3 +63,6 @@ strings64 -n MEMORYDUMP.dmp | findstr /i SAFE_SECRET_THAT
 ### Todo
 - Create a better example with user input   
 - Explain the concept better   
+
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-YES-green.svg)
+Ben and I are in the process of fine tuning this example.

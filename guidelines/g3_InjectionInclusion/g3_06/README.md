@@ -9,8 +9,17 @@ BMP images files may contain references to local ICC (International Color Consor
 ![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171130-lightgrey.svg)
 
-This guideline seems to be a response to CVE-2007-2789, a (currently) 10 year old vulnerability in java 1.5. This vulnerability allowed an attacker to craft a BMP file which, when opened on a unix/linux system, trick java into open arbitrary files.
+This guideline seems to be a response to [vulnerability CVE-2007-2789](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2789), a (currently) 10 year old vulnerability in 
+java 1
+.5. This 
+vulnerability allowed an attacker to craft a BMP file which, when opened on a unix/linux system, trick java into open arbitrary files.
 
 I don't currently see any reason to avoid BMP files. The problem was fixed years ago, nobody should be developing code that will run on an ancient java version like that.
 
 If anyone has any other (valid) arguments to avoid BMP files, feel free to add them.
+
+
+![Author](https://img.shields.io/badge/Author-Mattias_De_Wael-green.svg)
+![Date](https://img.shields.io/badge/Date-20171206-lightgrey.svg)
+
+You might be on to something, I am currently taking this up with Oracle.

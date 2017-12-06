@@ -16,7 +16,8 @@ The class ```be.howest.ti.secure.development.g0.g06.domain.Carpass``` keeps a pu
             public BigDecimal mileage;
         }
 
-This allows an attacker to modify the fields from outside.  Better is to make these private and final:
+This allows an attacker to modify the fields from outside.  Better is to make these ```private``` and, if possible, 
+```final```:
 
         public class Carpass {
             private final String vinNumber;

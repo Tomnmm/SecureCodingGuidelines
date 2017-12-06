@@ -1,4 +1,4 @@
-package guidelines.g2_ConfidentialInformation.g2_03.src.be.howest.ti.secure.development.g2.g03.Example01;
+package be.howest.ti.secure.development.g2.g03.Example01;
 
 public class G2_03Example01 {
 
@@ -31,9 +31,7 @@ public class G2_03Example01 {
 
         System.out.printf("Unsafe mode: My secret has %d characters %n" , myUnsafeSecret.length());
 
-//        clearUnsafeSecret(myUnsafeSecret);
-        
-        myUnsafeSecret = null;
+        myUnsafeSecret = null; // remove all (only) reference to the String containing 'sensitive' data.
         clearUnsafeSecret();
 
     }
@@ -57,14 +55,4 @@ public class G2_03Example01 {
         System.out.println("Unsafe wiping: Garbage collection started");
     }
 
-        private void clearUnsafeSecret( String myUnsafeSecret) throws InterruptedException {
-        myUnsafeSecret = null;
-
-        while( myUnsafeSecret != null) {
-            System.out.print("Password not null");
-            Thread.sleep(100);
-        }
-        System.gc();
-        System.out.println("Unsafe wiping: Garbage collection started");
-    }
 }
