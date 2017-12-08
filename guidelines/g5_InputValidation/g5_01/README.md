@@ -6,7 +6,7 @@ Input from untrusted sources must be validated before use. Maliciously crafted i
 
 # INPUT-1: Integer overflow
 
-![Author](https://img.shields.io/badge/Author-Emmanouil Perselis-blue.svg)
+![Author](https://img.shields.io/badge/Author-EmmanouilPerselis-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171208-lightgrey.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
