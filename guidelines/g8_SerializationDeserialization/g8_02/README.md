@@ -6,8 +6,8 @@ Once an object has been serialized the Java language's access controls can no lo
 
 Approaches for handling sensitive fields in serializable classes are:
 
-Declare sensitive fields transient
-Define the serialPersistentFields array field appropriately
-Implement writeObject and use ObjectOutputStream.putField selectively
-Implement writeReplace to replace the instance with a serial proxy
-Implement the Externalizable interface
+ - Declare sensitive fields transient
+ - Define the serialPersistentFields array field appropriately
+ - Implement writeObject and use ObjectOutputStream.putField selectively
+ - Implement writeReplace to replace the instance with a serial proxy
+ - Implement the Externalizable interface
