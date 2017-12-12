@@ -6,6 +6,6 @@
 ![Agree](https://img.shields.io/badge/AGREE-8-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
-It is better to design APIs with security in mind. Trying to retrofit security into an existing API is more difficult and error prone. For example, making a class final prevents a malicious subclass from adding finalizers, cloning, and overriding random methods (Guideline 4-5). Any use of the SecurityManager highlights an area that should be scrutinized.
+It is better to design APIs with security in mind. Trying to retrofit security into an existing API is more difficult and error prone. For example, making a class final prevents a malicious subclass from adding finalizers, cloning, and overriding random methods (Guideline [4-5](../../g4_AccessibilityExtensibility/g4_05)). Any use of the SecurityManager highlights an area that should be scrutinized.
 
 
