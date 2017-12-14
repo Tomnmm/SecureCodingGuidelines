@@ -16,11 +16,11 @@ However, doing so does have negative consequences. Code quality will be compromi
 
 ### Mutable vs Immutable Objects
 
-__immutable objects__ have no fields that can be changed after the object is created. For examples: `String` and `char`.    
+__Immutable objects__ have no fields that can be changed after the object is created. For example: `String` and `char`.    
 
-__Mutable objects__ have fields that can be changed. For examples: an array of `char` ( `char[]` ). 
+__Mutable objects__ have fields that can be changed. For example: an array of `char` ( `char[]` ). 
 
-A `String` object is immutable, that is, its contents never change, while an array of characters ( `char[]` ) has mutable elements. 
+A `String` object is immutable, that is, its contents never changes, while an array of characters ( `char[]` ) has mutable elements. 
 [\[Source\]](https://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html). The characters contained in the `char[]` are immutable, but the array itself is mutable.   
 
 Other things that will influence the memory is `Garbage Collection` and the `String Pool`.   
@@ -50,14 +50,19 @@ The string `abababababa...` is found in memory.
 
 1. Run the Java Class from commandline   
 
-2. Create a memory dump   
+2. Find the process id
+```   
+tasklist | findstr java
+```  
+
+3. Create a memory dump   
 ```   
 procdump64 -ma PID_of_the_process
 ```   
 
-3. Search for strings in the memory dump   
+4. Search for strings in the memory dump   
 ```
-strings64 -n MEMORYDUMP.dmp | findstr /i SAFE_SECRET_THAT
+strings64 -n 10 MEMORYDUMP.dmp | findstr /i SAFE_SECRET_THAT
 ```
 
 ### Todo
