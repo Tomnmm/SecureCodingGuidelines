@@ -3,7 +3,7 @@
 
 
 Design classes and methods for inheritance or declare them final [6]. Left non-final, a class or method can be maliciously overridden by an attacker. A class that does not permit subclassing is easier to implement and verify that it is secure. Prefer composition to inheritance.
-
+```java
 	// Unsubclassable class with composed behavior.
         public final class SensitiveClass {
 
@@ -25,7 +25,7 @@ Design classes and methods for inheritance or declare them final [6]. Left non-f
                 return new SensitiveClass(behavior);
             }
         }
-
+```
 Malicious subclasses that override the Object.finalize method can resurrect objects even if an exception was thrown from the constructor. Low-level classes with constructors explicitly throwing a java.security.SecurityException are likely to have security issues. From JDK6 on, an exception thrown before the java.lang.Object constructor exits which prevents the finalizer from being called. Therefore, if subclassing is allowed and security manager permission is required to construct an object, perform the check before calling the super constructor. This can be done by inserting a method call as an argument to an alternative ("this") constructor invocation.
 
         public class NonFinal {
