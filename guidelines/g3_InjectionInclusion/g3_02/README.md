@@ -22,7 +22,7 @@ An example of using PreparedStatement correctly:
 
 This example uses an sqlite database to show one of the effects of improper input validation. The example is written on a linux system, so you will need to adjust the path to the database when running the code on other OS'es.
 
-The ```Example``` class first creates a database connection, then creates the tables (so no existing database is needed) and then show the result of bad and good code.
+The ```Example``` class first creates a database connection, then creates the tables (so no existing database is needed) and then shows the result of bad and good code.
 
 The bad example creates a dynamic select statement, based on user input (simulated with a simple variable). The query as sent to the database query parser is printed.
 Once executed, the example basically simulates an authentication bypass attack as often seen on website login pages some years ago.
