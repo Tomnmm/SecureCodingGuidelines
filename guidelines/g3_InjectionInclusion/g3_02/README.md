@@ -1,5 +1,5 @@
 # INJECT-2: Avoid dynamic SQL
-![Author](https:``//img.shields.io/badge/Author-Oracle-blue.svg)
+![Author](https://img.shields.io/badge/Author-Oracle-blue.svg)
 
 ``
 It is well known that dynamically created SQL statements including untrusted input are subject to command injection. This often takes the form of supplying an input containing a quote character (') followed by SQL. Avoid dynamic SQL.
