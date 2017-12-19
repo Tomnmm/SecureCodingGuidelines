@@ -27,7 +27,7 @@ Design classes and methods for inheritance or declare them final [6]. Left non-f
         }
 ```
 Malicious subclasses that override the Object.finalize method can resurrect objects even if an exception was thrown from the constructor. Low-level classes with constructors explicitly throwing a java.security.SecurityException are likely to have security issues. From JDK6 on, an exception thrown before the java.lang.Object constructor exits which prevents the finalizer from being called. Therefore, if subclassing is allowed and security manager permission is required to construct an object, perform the check before calling the super constructor. This can be done by inserting a method call as an argument to an alternative ("this") constructor invocation.
-
+```java
         public class NonFinal {
 
             // sole accessible constructor
@@ -49,9 +49,9 @@ Malicious subclasses that override the Object.finalize method can resurrect obje
             }
 
         }
-
+```
 For compatibility with versions of Java prior to JDK 6, check that the class has been initialized before every sensitive operation and before trusting any other instance of the class. It may be possible to see a partially initialized instance, so any variable should have a safe interpretation for the default value. For mutable classes, it is advisable to make an "initialized" flag volatile to create a suitable happens-before relationship.
-
+```java
         public class NonFinal {
 
             private volatile boolean initialized;
@@ -78,7 +78,7 @@ For compatibility with versions of Java prior to JDK 6, check that the class has
                 }
             }
         }
-
+```
 When confirming an object's class type by examining the java.lang.Class instance belonging to that object, do not compare Class instances solely using class names (acquired via Class.getName), because instances are scoped both by their class name as well as the class loader that defined the class.
 
 
