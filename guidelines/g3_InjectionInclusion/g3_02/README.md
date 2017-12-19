@@ -9,8 +9,8 @@ For parameterised SQL statements using Java Database Connectivity (JDBC), use ja
 An example of using PreparedStatement correctly:
 
         String sql = "SELECT * FROM User WHERE userId = ?"; 
-        PreparedStatement stmt = con.prepareStatement(sql); 
-        stmt.setString(1, userId); 
+        PreparedStatement prepStmt = con.prepareStatement(sql); 
+        prepStmt.setString(1, userId); 
         ResultSet rs = prepStmt.executeQuery();
 
 ## Simple example
