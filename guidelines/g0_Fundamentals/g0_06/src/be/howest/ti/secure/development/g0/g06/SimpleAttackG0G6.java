@@ -10,7 +10,8 @@ import java.math.BigDecimal;
  */
 public class SimpleAttackG0G6 {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
         new SimpleAttackG0G6().run();
     }
 
