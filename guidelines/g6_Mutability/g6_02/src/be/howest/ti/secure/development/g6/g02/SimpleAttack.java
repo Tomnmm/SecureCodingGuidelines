@@ -17,7 +17,7 @@ public class SimpleAttack {
 
         Calendar birthday = Calendar.getInstance();
         birthday.set(1986, Calendar.OCTOBER, 21);
-        //Person p = new Person(Person p = new Person("Mattias De Wael", birthday.getTime());"Mattias De Wael", birthday.getTime());
+        //Person p = new Person("Mattias De Wael", birthday.getTime());
         Person p = new SafePerson("Mattias De Wael", birthday.getTime());
 
         System.out.println(p);
