@@ -21,7 +21,7 @@ __Immutable objects__ have no fields that can be changed after the object is cre
 __Mutable objects__ have fields that can be changed. For example: an array of `char` ( `char[]` ). 
 
 A `String` object is immutable, that is, its contents never changes, while an array of characters ( `char[]` ) has mutable elements. 
-[\[Source\]](https://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html). The characters contained in the `char[]` are immutable, but the array itself is mutable.   
+[Source](https://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html). The characters contained in the `char[]` are immutable, but the array itself is mutable.   
 
 Other things that will influence the memory is `Garbage Collection` and the `String Pool`.   
 
