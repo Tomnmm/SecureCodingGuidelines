@@ -36,6 +36,13 @@ As of Java SE 8, the java.lang.Math class also contains methods for various oper
 ![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-YES-green.svg)
 
 
-```checkGrowByUnsafe``` adds ```extra``` to ```current```, causing an overflow when ```extra``` + ```current``` is larger than ```Integer.MAX_VALUE```. When this happens, the value is negative, causing the check to pass even when a large number is entered.
+``checkGrowByUnsafe`` adds ``extra`` to ``current``, causing an overflow when ``extra`` + ``current`` is larger than ``Integer.MAX_VALUE``. When this happens, the value is negative, causing the check to pass even when a large number is entered.
 
-The safe version (```checkGrowBySafe```) prevents this by substracting extra from max and comparing it to current, basically reversing the check.
+The safe version (``checkGrowBySafe``) prevents this by substracting extra from max and comparing it to current, basically reversing the check.
+
+
+## Verbose checkGrowByLogicalThinking
+![Author](https://img.shields.io/badge/Author-Sven.Meuleman-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171224-lightgrey.svg)
+
+``checkGrowByLogicalThinking`` uses a more elaborate way of checking the values but in the meantime also returns clearer errormessages allong the way. This nog only helps in better understanding the code but also allows for a finer grained error handling.  
