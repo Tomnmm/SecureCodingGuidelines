@@ -9,4 +9,5 @@ API documentation should cover security-related information such as required per
 ![Date](https://img.shields.io/badge/Date-20171223-lightgrey.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
 Documentation should containing this information should be handled as sensitive data, only distributed to developers and customers. Have this information out in the wild could give attackers and advantage.
