@@ -2,6 +2,7 @@ package be.howest.ti.secure.development.g0.g06;
 
 import be.howest.ti.secure.development.g0.g06.domain.Carpass;
 import be.howest.ti.secure.development.g0.g06.domain.SafeCarpass;
+import be.howest.ti.secure.development.g0.g06.domain.SafestCarpass;
 
 import java.math.BigDecimal;
 
@@ -42,6 +43,13 @@ public class SimpleAttackG0G6 {
 
         System.out.println(safecarpass);
         System.out.printf("Car %s has %s kms\n", safecarpass.getVinNumber(), safecarpass.getMileage().toString());
+        /**
+         * Added by Sven Meuleman on 24/12/2017
+         */
+        SafestCarpass safestcarpass = new SafestCarpass("VIN3", new BigDecimal(654321));
 
+        System.out.println(safestcarpass);
+        System.out.printf("Car %s has %s kms\n", safestcarpass.getVinNumber(), safestcarpass.getMileage().toString());
     }
+  
 }
