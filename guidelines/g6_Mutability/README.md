@@ -10,7 +10,7 @@ Mutability, whilst appearing innocuous, can cause a surprising variety of securi
  - MUTABLE-5: [Do not trust identity equality when overridable on input reference objects](g6_05)
  - MUTABLE-6: [Treat passing input to untrusted object as output](g6_06)
  - MUTABLE-7: [Treat output from untrusted object as input](g6_07)
- - MUTABLE-8: [Define wrapper methods around modifiable](g6_08)
+ - MUTABLE-8: [Define wrapper methods around modifiable internal state](g6_08)
  - MUTABLE-9: [Make public static fields final](g6_09)
  - MUTABLE-10: [Ensure public static final field values are constants](g6_10)
  - MUTABLE-11: [Do not expose mutable statics](g6_11)
