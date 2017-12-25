@@ -26,6 +26,6 @@ If a state that is internal to a class must be publicly accessible and modifiabl
             }
         }
 
-Make additional defensive copies in getState and setState if the internal state is mutable, as described in Guideline 6-2.
+Make additional defensive copies in getState and setState if the internal state is mutable, as described in Guideline [6-2](../g6_02).
 
 Where possible make methods for operations that make sense in the context of the interface of the class rather than merely exposing internal implementation.
