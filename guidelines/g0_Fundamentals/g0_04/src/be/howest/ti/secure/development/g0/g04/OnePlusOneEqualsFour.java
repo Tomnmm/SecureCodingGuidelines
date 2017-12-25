@@ -29,9 +29,8 @@ public class OnePlusOneEqualsFour {
                 field = clazz.getDeclaredField("value");
                 field.setAccessible(true);
                 field.set(i, 2); // let's give it the value 2
-
-                System.out.println("Ouch, Integer private field \"value\" was updated from value 1 to 2. "
-                        + "You're vulnerable.");
+               	System.out.println("Ouch, Integer private field \"value\" was updated from value 1 to 2. "
+                            + "You're vulnerable.");
             } catch (NoSuchFieldException e) {
                 System.out.println("Oops, Integer private field \"value\" not found. You're safe.");
             } catch (IllegalAccessException e) {

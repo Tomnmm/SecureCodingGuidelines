@@ -11,8 +11,7 @@ public class Example {
     public void run() {
         Connection db = null;
         String user_input = "' or 1=1--";
-        String dbFile = "/tmp/example.sqlite";          // Modify this to match your environment
-
+        String dbFile = System.getProperty("user.dir")+"/example.sqlite";          // Sven Meuleman: Modfied it so it creates the file in the directory where the code is run.
         try {
             System.out.println("Connect to the database");
             String url = "jdbc:sqlite:" + dbFile;
@@ -31,13 +30,9 @@ public class Example {
 
             String sql = "select * from t1 where password = '" + user_input + "'";
             System.out.println(sql);
-            ResultSet rs = statement.executeQuery(sql);
-
-            while(rs.next()) {
-                System.out.println("name = " + rs.getString("user"));
-                System.out.println("id = " + rs.getInt("id"));
-            }
-
+            showResults(statement.executeQuery(sql));
+            
+            
             // Good example
             System.out.println("");
             System.out.println("Good example");
@@ -45,14 +40,9 @@ public class Example {
             sql = "select * from t1 where password = ?";
             System.out.println(sql);
             PreparedStatement stmt = db.prepareStatement(sql);
-
             stmt.setString(1, user_input);
-            rs = stmt.executeQuery();
-
-            while(rs.next()) {
-                System.out.println("name = " + rs.getString("user"));
-                System.out.println("id = " + rs.getInt("id"));
-            }
+            showResults(stmt.executeQuery());
+            
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -66,5 +56,28 @@ public class Example {
             }
         }
     }
+    /***
+     * Added by Sven Meuleman on 24/12/2017
+     * Best practice don't duplicate code, write once use many
+     * 
+     */
+    private void showResults(ResultSet rs)
+    {
+    	try
+    	{
+    		/**
+    		 * Check if we have a result
+    		 */
+    		if (!rs.isBeforeFirst() ) {    
+    			System.out.println("No data"); 
+    		} 
+    		while(rs.next()) {
+    			System.out.println("name = " + rs.getString("user"));
+    			System.out.println("id = " + rs.getInt("id"));
+    		}
+    	 } catch (SQLException e) {
+             System.out.println(e.getMessage());
+    	 }
+     }
 }
 

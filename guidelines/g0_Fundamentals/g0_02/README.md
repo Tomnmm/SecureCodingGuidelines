@@ -6,7 +6,7 @@ Duplication of code and data causes many problems. Both code and data tend not t
 
 ![Author](https://img.shields.io/badge/Author-Bart.Devriendt-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171001-lightgrey.svg)
-![Agree](https://img.shields.io/badge/AGREE-8-green.svg)
+![Agree](https://img.shields.io/badge/AGREE-9-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 Using an IDE like IntelliJ can help you avoid these types of problems.  It will indicate you when code is duplicate.  
