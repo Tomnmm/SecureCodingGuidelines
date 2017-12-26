@@ -9,3 +9,18 @@ If a class is final and does not provide an accessible method for acquiring a co
 The java.lang.Cloneable mechanism is problematic and should not be used. Implementing classes must explicitly copy all mutable fields which is highly error-prone. Copied fields may not be final. The clone object may become available before field copying has completed, possibly at some intermediate stage. In non-final classes Object.clone will make a new instance of the potentially malicious subclass. Implementing Cloneable is an implementation detail, but appears in the public interface of the class.
 
 
+## Example
+
+![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171226-lightgrey.svg)
+
+The ```Person``` class provides 3 ways to copy ```Person``` objects:
+
+* A classic copy constructor
+* A static copy method
+* A normal copy method
+
+Both copy methods use the copy constructor internally, only how you call them is different.
+
+The example creates a ```Person``` object, then creates a copy using each way mentioned above. Then the name field of each copy is changed and printed to show the changed in each object, proving the objects are in fact copies.
+ 
