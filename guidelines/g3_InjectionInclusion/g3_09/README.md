@@ -4,7 +4,7 @@
 
 Working with floating point numbers requires care when importing those from outside of a trust boundary, as the NaN (not a number) or infinite values can be injected into applications via untrusted input data, for example by conversion of (untrusted) Strings converted by the Double.valueOf method. Unfortunately the processing of exceptional values is typically not immediately noticed without introducing sanitization code. Moreover, passing an exceptional value to an operation propagates the exceptional numeric state to the operation result.
 
-Both positive and negative infinity values are possible outcomes of a floating point operation [2], when results become too high or too low to be representable by the memory area that backs a primitive floating point value. Also, the exceptional value NaN can result from dividing 0.0 by 0.0 or subtracting infinity from infinity.
+Both positive and negative infinity values are possible outcomes of a floating point operation [2][2], when results become too high or too low to be representable by the memory area that backs a primitive floating point value. Also, the exceptional value NaN can result from dividing 0.0 by 0.0 or subtracting infinity from infinity.
 
 The results of casting propagated exceptional floating point numbers to short, integer and long primitive values need special care, too. This is because an integer conversion of a NaN value will result in a 0, and a positive infinite value is transformed to Integer.MAX_VALUE (or Integer.MIN_VALUE for negative infinity), which may not be correct in certain use cases.
 
@@ -24,3 +24,4 @@ A typical code pattern that can block further processing of unexpected floating 
 
         // normal processing starts here
 
+[2]: http://www.oracle.com/technetwork/java/seccodeguide-139067.html#ref-2
