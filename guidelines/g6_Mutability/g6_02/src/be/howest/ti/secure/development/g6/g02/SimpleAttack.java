@@ -17,21 +17,24 @@ public class SimpleAttack {
 
         Calendar birthday = Calendar.getInstance();
         birthday.set(1986, Calendar.OCTOBER, 21);
-        //Person p = new Person("Mattias De Wael", birthday.getTime());
-        Person p = new SafePerson("Mattias De Wael", birthday.getTime());
-
-        System.out.println(p);
-        System.out.printf("%s is %s\n", p.getName(), p.isOfAge()?"of age":"underage");
-
+        Person p = new Person("Mattias De Wael", birthday.getTime());
+        Person p1 = new SafePerson("Mattias De Wael", birthday.getTime());
+        print(p);
         attackUsingVerySimpleJavaCode(p);
+        print(p1);
+        attackUsingVerySimpleJavaCode(p1);
 
-        System.out.println(p);
-        System.out.printf("%s is %s\n", p.getName(), p.isOfAge()?"of age":"underage");
+    }
+    private void print(Person p)
+    {
+    	 System.out.println(p);
+         System.out.printf("%s is %s\n", p.getName(), p.isOfAge()?"of age":"underage");
     }
 
     private void attackUsingVerySimpleJavaCode(Person p) {
         // Nothing fancy ...
         p.getBirthday().setTime(new Date().getTime());
+        print(p);
     }
 
 }
