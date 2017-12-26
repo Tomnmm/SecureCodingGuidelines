@@ -4,7 +4,7 @@
 
 Java code is subject to runtime checks for type, array bounds, and library usage. Native code, on the other hand, is generally not. While pure Java code is effectively immune to traditional buffer overflow attacks, native methods are not. To offer some of these protections during the invocation of native code, do not declare a native method public. Instead, declare it private and expose the functionality through a public Java-based wrapper method. A wrapper can safely perform any necessary input validation prior to the invocation of the native method:
 
-        public final class NativeMethodWrapper {
+```        public final class NativeMethodWrapper {
 
             // private native method
             private native void nativeOperation(byte[] data, int offset,
@@ -32,5 +32,4 @@ Java code is subject to runtime checks for type, array bounds, and library usage
 
                 nativeOperation(data, offset, len);
             }
-        }
-        
+        }```      
