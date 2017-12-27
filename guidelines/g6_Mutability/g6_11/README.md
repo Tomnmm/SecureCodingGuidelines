@@ -1,5 +1,6 @@
 # MUTABLE-11: Do not expose mutable statics
 ![Author](https://img.shields.io/badge/Author-Oracle-blue.svg)
+![UKN](https://img.shields.io/badge/UKN-Sven.Meuleman-red.svg)
 
 
 Private statics are easily exposed through public interfaces, if sometimes only in a limited way (see Guidelines [6-2](../g6_02) and [6-6](../g6_06)). Mutable statics may also change behaviour between unrelated code. To ensure safe code, private statics should be treated as if they are public. Adding boilerplate to expose statics as singletons does not fix these issues.
