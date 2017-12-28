@@ -18,7 +18,7 @@ Consider:
             }
         }
 
-If Method.invoke was taken as the immediate caller, then the action would be performed with all permissions. So, for the methods discussed in Guidelines 9-8 through 9-10, the Method.invoke implementation is ignored when determining the immediate caller.
+If Method.invoke was taken as the immediate caller, then the action would be performed with all permissions. So, for the methods discussed in Guidelines [9-8](../g9_08), [9-9](../g9_09), and [9-10](../g9_10), the Method.invoke implementation is ignored when determining the immediate caller.
 
         +--------------------------------+
         | action                         |
