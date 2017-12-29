@@ -15,16 +15,16 @@ public class TransientSaveExample implements Serializable {
     public static void main(String[] args) {
         TransientSaveExample objToSerialize = new TransientSaveExample("I wanna be serialized and transferred", "Please don't serialize me");
 
+        //Print the content of the object
+        System.out.println("Object before serialization");
+        System.out.println("Non Sensitive Data = " + objToSerialize.nonSensitiveData);
+        System.out.println("Sensitive Data = " + objToSerialize.sensitiveData);
+
         // Serialization
         try {
             //Save object in a file
             FileOutputStream file = new FileOutputStream("serialFile.dat");
             ObjectOutputStream out = new ObjectOutputStream(file);
-
-            //Print the content of the object
-            System.out.println("Object before serialization");
-            System.out.println("Non Sensitive Data = " + objToSerialize.nonSensitiveData);
-            System.out.println("Sensitive Data = " + objToSerialize.sensitiveData);
 
             //Serialization of object
             out.writeObject(objToSerialize);
