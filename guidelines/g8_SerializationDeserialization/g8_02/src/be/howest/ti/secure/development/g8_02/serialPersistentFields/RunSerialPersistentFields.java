@@ -1,4 +1,4 @@
-package src.be.howest.ti.secure.development.g8_02.serialPersistentFields;
+package be.howest.ti.secure.development.g8_02.serialPersistentFields;
 
 import java.io.*;
 

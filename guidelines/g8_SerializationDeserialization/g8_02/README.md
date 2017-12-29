@@ -60,13 +60,13 @@ Non Sensitive Data = I wanna be serialized and transferred
 sensitiveData = null
 ```   
 
-## Define the serialPersistentFields array field appropriately
+## Define the serialPersistentFields array field appropriately & Implement writeObject and use ObjectOutputStream.putField selectively
 ![Author](https://img.shields.io/badge/Author-Ben-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171229-lightgrey.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
-### Information regarding serialPersistentFields array field 
+### Information
 The text below is an almost copy/paste from: <https://docs.oracle.com/javase/7/docs/platform/serialization/spec/serial-arch.html#6250>
 
 **Defining Serializable Fields for a Class**    
