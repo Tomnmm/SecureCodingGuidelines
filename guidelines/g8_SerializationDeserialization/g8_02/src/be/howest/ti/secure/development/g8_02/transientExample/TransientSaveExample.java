@@ -1,4 +1,4 @@
-package guidelines.g8_SerializationDeserialization.g8_02.src.be.howest.ti.secure.development.g8_02.transientExample;
+package be.howest.ti.secure.development.g8_02.transientExample;
 
 import java.io.*;
 
