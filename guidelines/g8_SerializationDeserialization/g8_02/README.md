@@ -39,25 +39,30 @@ Output:
 Object before serialization
 Non Sensitive Data = I wanna be serialized and transferred
 Sensitive Data = Please don't serialize me
+Non Sensitive Number = 42
 Object has been serialized 
 
 Object has been deserialized 
 Non Sensitive Data = I wanna be serialized and transferred
 Sensitive Data = Please don't serialize me
+Non Sensitive Number = 42
 ```   
 
 **TransientSaveExample.java**  
-In the safe example the variable containing the sensitive data is declared `transient`. Because of this, the file *SerialFile.dat* does not contains the sensitive data.   
+In the safe example the variable containing the sensitive data is declared `transient`. Because of this, the file *SerialFile.dat* does not contains the sensitive data. 
+Notice the `null` for  the `Sensitive Data` field.
 Output:
 ```
 Object before serialization
 Non Sensitive Data = I wanna be serialized and transferred
 Sensitive Data = Please don't serialize me
+Non Sensitive Number = 42
 Object has been serialized 
 
 Object has been deserialized 
 Non Sensitive Data = I wanna be serialized and transferred
-sensitiveData = null
+Sensitive Data = null
+Non Sensitive Number = 42
 ```   
 
 ## Define the serialPersistentFields array field appropriately & Implement writeObject and use ObjectOutputStream.putField selectively
@@ -80,6 +85,7 @@ or if the field does not have the required modifiers, then the behavior is as if
 ```
 class SerialPersistentFieldsClass implements Serializable {
     private String nonSensitiveData;
+    private String sensitiveData;
     private int nonSensitiveNumber;
 
     private static final ObjectStreamField[] serialPersistentFields = {
