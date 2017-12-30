@@ -5,21 +5,23 @@ import java.io.*;
 public class TransientSaveExample implements Serializable {
     private String nonSensitiveData;
     private transient String sensitiveData;
+    private int nonSensitiveNumber;
 
     // Default constructor
-    public TransientSaveExample(String nonSensitiveData, String sensitiveData) {
+    public TransientSaveExample(String nonSensitiveData, String sensitiveData, int nonSensitiveNumber) {
         this.nonSensitiveData = nonSensitiveData;
         this.sensitiveData = sensitiveData;
+        this.nonSensitiveNumber = nonSensitiveNumber;
     }
 
     public static void main(String[] args) {
-        TransientSaveExample objToSerialize = new TransientSaveExample("I wanna be serialized and transferred", "Please don't serialize me");
+        TransientSaveExample objToSerialize = new TransientSaveExample("I wanna be serialized and transferred", "Please don't serialize me", 42);
 
         //Print the content of the object
         System.out.println("Object before serialization");
         System.out.println("Non Sensitive Data = " + objToSerialize.nonSensitiveData);
         System.out.println("Sensitive Data = " + objToSerialize.sensitiveData);
-
+        System.out.println("Non Sensitive Number = " + objToSerialize.nonSensitiveNumber);
         // Serialization
         try {
             //Save object in a file
@@ -56,7 +58,8 @@ public class TransientSaveExample implements Serializable {
             //Print the content of the deserialized object
             System.out.println("Object has been deserialized ");
             System.out.println("Non Sensitive Data = " + objToDeserialize.nonSensitiveData);
-            System.out.println("sensitiveData = " + objToDeserialize.sensitiveData);
+            System.out.println("Sensitive Data = " + objToDeserialize.sensitiveData);
+            System.out.println("Non Sensitive Number = " + objToSerialize.nonSensitiveNumber);
 
         } catch(IOException | ClassNotFoundException ex){
             System.out.println("Deserialization exception is caught");

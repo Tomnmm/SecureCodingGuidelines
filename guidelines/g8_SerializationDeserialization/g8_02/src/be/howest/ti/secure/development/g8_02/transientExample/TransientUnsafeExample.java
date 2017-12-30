@@ -5,15 +5,17 @@ import java.io.*;
 public class TransientUnsafeExample implements Serializable {
     private String nonSensitiveData;
     private String sensitiveData;
+    private int nonSensitiveNumber;
 
     // Default constructor
-    public TransientUnsafeExample(String nonSensitiveData, String sensitiveData) {
+    public TransientUnsafeExample(String nonSensitiveData, String sensitiveData, int nonSensitiveNumber ) {
         this.nonSensitiveData = nonSensitiveData;
         this.sensitiveData = sensitiveData;
+        this.nonSensitiveNumber = nonSensitiveNumber;
     }
 
     public static void main(String[] args) {
-        TransientUnsafeExample objToSerialize = new TransientUnsafeExample("I wanna be serialized and transferred", "Please don't serialize me");
+        TransientUnsafeExample objToSerialize = new TransientUnsafeExample("I wanna be serialized and transferred", "Please don't serialize me",42);
 
         // Serialization
         try {
@@ -25,6 +27,7 @@ public class TransientUnsafeExample implements Serializable {
             System.out.println("Object before serialization");
             System.out.println("Non Sensitive Data = " + objToSerialize.nonSensitiveData);
             System.out.println("Sensitive Data = " + objToSerialize.sensitiveData);
+            System.out.println("Non Sensitive Number = " + objToSerialize.nonSensitiveNumber);
 
             //Serialization of object
             out.writeObject(objToSerialize);
@@ -57,6 +60,7 @@ public class TransientUnsafeExample implements Serializable {
             System.out.println("Object has been deserialized ");
             System.out.println("Non Sensitive Data = " + objToDeserialize.nonSensitiveData);
             System.out.println("Sensitive Data = " + objToDeserialize.sensitiveData);
+            System.out.println("Non Sensitive Number = " + objToSerialize.nonSensitiveNumber);
 
         } catch(IOException | ClassNotFoundException ex){
             System.out.println("Deserialization exception is caught");
