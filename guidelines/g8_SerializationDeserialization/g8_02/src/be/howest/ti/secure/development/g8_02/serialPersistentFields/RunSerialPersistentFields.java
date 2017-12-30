@@ -6,12 +6,13 @@ public class RunSerialPersistentFields {
 
     public static void main(String[] args) {
 
-        SerialPersistentFieldsClass objToSerialize = new SerialPersistentFieldsClass("I wanna be serialized and transferred", "Please don't serialize me");
+        SerialPersistentFieldsClass objToSerialize = new SerialPersistentFieldsClass("I wanna be serialized and transferred", "Please don't serialize me",42);
 
         //Print the content of the object
         System.out.println("Object before serialization");
         System.out.println("Non Sensitive Data = " + objToSerialize.getNonSensitiveData());
         System.out.println("Sensitive Data = " + objToSerialize.getSensitiveData());
+        System.out.println("Non Sensitive Number = " + objToSerialize.getNonSensitiveNumber());
 
         // Serialization
         try {
@@ -50,6 +51,7 @@ public class RunSerialPersistentFields {
             System.out.println("Object has been deserialized ");
             System.out.println("Non Sensitive Data = " + objToDeserialize.getNonSensitiveData());
             System.out.println("Sensitive Data = " + objToDeserialize.getSensitiveData());
+            System.out.println("Non Sensitive Number = " + objToSerialize.getNonSensitiveNumber());
 
         } catch (IOException | ClassNotFoundException ex) {
             System.out.println("Deserialization exception is caught");

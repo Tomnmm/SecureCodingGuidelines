@@ -28,7 +28,7 @@ Example:
 ```
 public class TransientSaveExample implements Serializable {  
       private transient String sensitiveData;  
-}
+}      
 ```
  
 ### Examples
@@ -80,9 +80,11 @@ or if the field does not have the required modifiers, then the behavior is as if
 ```
 class SerialPersistentFieldsClass implements Serializable {
     private String nonSensitiveData;
+    private int nonSensitiveNumber;
 
     private static final ObjectStreamField[] serialPersistentFields = {
-            new ObjectStreamField("nonSensitiveData", String.class)
+           new ObjectStreamField("nonSensitiveData", String.class),
+           new ObjectStreamField("nonSensitiveNumber", Integer.TYPE)
     };
 }
 ```
@@ -95,18 +97,20 @@ as long as it maintains the mapping back to its Serializable fields that must re
     private void readObject(ObjectInputStream in)
             throws IOException, ClassNotFoundException {
 
-        // get the field and assign it
+        // get the fields and assign it
         ObjectInputStream.GetField fields = in.readFields();
 
-         nonSensitiveData =(String) fields.get("nonSensitiveData", "");
+        nonSensitiveData =(String) fields.get("nonSensitiveData", "");
+        nonSensitiveNumber = fields.get("nonSensitiveNumber", 0);
     }
 ```
 ```
     private void writeObject(ObjectOutputStream out) throws IOException {
 
-        // write into the ObjectStreamField array the variable
+        // write the variables into the ObjectStreamField array
         ObjectOutputStream.PutField fields = out.putFields();
         fields.put("nonSensitiveData", nonSensitiveData);
+        fields.put("nonSensitiveNumber", nonSensitiveNumber);
         out.writeFields();
     }
 ```
@@ -139,10 +143,13 @@ Output:
 Object before serialization
 Non Sensitive Data = I wanna be serialized and transferred
 Sensitive Data = Please don't serialize me
+Non Sensitive Number = 42
 Object has been serialized 
 
 Object has been deserialized 
 Non Sensitive Data = I wanna be serialized and transferred
 Sensitive Data = null
+Non Sensitive Number = 42
+
 ```
 > Reference: [docs.oracle.com](https://docs.oracle.com/javase/8/docs/platform/serialization/spec/examples.html)
