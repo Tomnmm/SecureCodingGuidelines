@@ -10,9 +10,7 @@ public class RunSerialPersistentFields {
 
         //Print the content of the object
         System.out.println("Object before serialization");
-        System.out.println("Non Sensitive Data = " + objToSerialize.getNonSensitiveData());
-        System.out.println("Sensitive Data = " + objToSerialize.getSensitiveData());
-        System.out.println("Non Sensitive Number = " + objToSerialize.getNonSensitiveNumber());
+        System.out.println(objToSerialize.toString());
 
         // Serialization
         try {
@@ -49,9 +47,7 @@ public class RunSerialPersistentFields {
 
             //Print the content of the deserialized object
             System.out.println("Object has been deserialized ");
-            System.out.println("Non Sensitive Data = " + objToDeserialize.getNonSensitiveData());
-            System.out.println("Sensitive Data = " + objToDeserialize.getSensitiveData());
-            System.out.println("Non Sensitive Number = " + objToSerialize.getNonSensitiveNumber());
+            System.out.println(objToDeserialize.toString());
 
         } catch (IOException | ClassNotFoundException ex) {
             System.out.println("Deserialization exception is caught");

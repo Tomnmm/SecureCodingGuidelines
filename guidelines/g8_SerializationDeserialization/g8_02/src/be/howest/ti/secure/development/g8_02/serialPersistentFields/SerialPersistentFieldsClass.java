@@ -41,4 +41,9 @@ class SerialPersistentFieldsClass implements Serializable {
         fields.put("nonSensitiveNumber", nonSensitiveNumber);
         out.writeFields();
     }
+
+    @Override
+    public String toString() {
+        return "Non Sensitive Data = " + this.getNonSensitiveData() +  " \nSensitive Data = " + this.getSensitiveData() +  " \nNon Sensitive Number = " + this.getNonSensitiveNumber()+ "\n";
+    }
 }
