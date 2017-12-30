@@ -17,17 +17,17 @@ public class TransientUnsafeExample implements Serializable {
     public static void main(String[] args) {
         TransientUnsafeExample objToSerialize = new TransientUnsafeExample("I wanna be serialized and transferred", "Please don't serialize me",42);
 
+        //Print the content of the object
+        System.out.println("Object before serialization");
+        System.out.println("Non Sensitive Data = " + objToSerialize.nonSensitiveData);
+        System.out.println("Sensitive Data = " + objToSerialize.sensitiveData);
+        System.out.println("Non Sensitive Number = " + objToSerialize.nonSensitiveNumber);
+
         // Serialization
         try {
             //Save object in a file
             FileOutputStream file = new FileOutputStream("serialFile.dat");
             ObjectOutputStream out = new ObjectOutputStream(file);
-
-            //Print the content of the object
-            System.out.println("Object before serialization");
-            System.out.println("Non Sensitive Data = " + objToSerialize.nonSensitiveData);
-            System.out.println("Sensitive Data = " + objToSerialize.sensitiveData);
-            System.out.println("Non Sensitive Number = " + objToSerialize.nonSensitiveNumber);
 
             //Serialization of object
             out.writeObject(objToSerialize);

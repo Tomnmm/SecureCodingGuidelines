@@ -22,6 +22,7 @@ public class TransientSaveExample implements Serializable {
         System.out.println("Non Sensitive Data = " + objToSerialize.nonSensitiveData);
         System.out.println("Sensitive Data = " + objToSerialize.sensitiveData);
         System.out.println("Non Sensitive Number = " + objToSerialize.nonSensitiveNumber);
+
         // Serialization
         try {
             //Save object in a file
