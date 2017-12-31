@@ -46,3 +46,14 @@ The safe version (``checkGrowBySafe``) prevents this by substracting extra from 
 ![Date](https://img.shields.io/badge/Date-20171224-lightgrey.svg)
 
 ``checkGrowByLogicalThinking`` uses a more elaborate way of checking the values but in the meantime also returns clearer errormessages allong the way. This nog only helps in better understanding the code but also allows for a finer grained error handling.  
+
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171231-lightgrey.svg)
+
+Interesting and maybe usefull in a debug mode, but it  makes me thing about g0_00 (Prefer to have obviously no flaws rather then no obvious flaws). Or is this just me?
+
+## AddExact()
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171231-lightgrey.svg)
+
+You can also use ``Math.AddExact`` 
