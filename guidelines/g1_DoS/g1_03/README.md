@@ -55,5 +55,6 @@ Interesting and maybe usefull in a debug mode, but it  makes me thing about g0_0
 ## AddExact()
 ![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171231-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
 
 You can also use ``Math.AddExact`` 
