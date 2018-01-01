@@ -12,7 +12,7 @@ Classes loaded by different loaders do not have package-private access to one an
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 ## Explanation about who can use what from whom
-![inheritence](img/inheritence.PNG)  
+![inheritence](https://github.com/HowestTISecureDevelopment/SecureCodingGuidelines/raw/master/guidelines/g4_AccessibilityExtensibility/g4_01/img/inheritence.png)  
 Explanations
 * A private member is only accessible within the same class as it is declared.
 * A member with no access modifier is only accessible within classes in the same package.

@@ -16,6 +16,10 @@ public class SimpleAttack {
    
         System.out.println("LogicalThinking version with input " + (Integer.MAX_VALUE));
         this.checkGrowdByLogicalThinking(Integer.MAX_VALUE);
+
+		System.out.println("exampleAddExact version with input " + (Integer.MAX_VALUE));
+		this.exampleAddExact(Integer.MAX_VALUE);
+
     }
 
    private void checkGrowByUnsafe(int extra) {
@@ -82,5 +86,17 @@ public class SimpleAttack {
     		}
     	}
     }
-    
+
+    //Added by Jürgen Taverniers on 31/12/2017
+    private void exampleAddExact(int extra){
+    	int current = 10;
+    	final int MAX = Integer.MAX_VALUE;
+		System.out.println("Without AddExact: current (" + current + ") + extra (" + extra + ") = " + (current + extra));
+    	try {
+			System.out.println("With AddExact: current (" + current + ") + extra (" + extra + ") = " + Math.addExact(current, extra));
+		}catch (ArithmeticException e){
+			System.out.println("With AddExact: " + e);
+		}
+    }
+
 }
