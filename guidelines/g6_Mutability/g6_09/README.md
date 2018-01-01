@@ -12,3 +12,11 @@ Callers can trivially access and modify public non-final static fields. Neither 
 If using an interface instead of a class, the modifiers "public static final" can be omitted to improve readability, as the constants are implicitly public, static, and final. Constants can alternatively be defined using an enum declaration.
 
 Protected static fields suffer from the same problem as their public equivalents but also tend to indicate confused design.
+
+## Example
+![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180101-lightgrey.svg)
+
+The `UnsafeFiles` class allows anyone to change the value of `separator`, without any validation. This could lead to unexpected results, as shown in the example.
+
+The `SafeFiles` doesn't allow this public modification.
