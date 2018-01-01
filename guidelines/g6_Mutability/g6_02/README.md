@@ -28,7 +28,7 @@ The field is marked ```final``` because we do not want the birthday to change. H
 This is a vulnerability because such changes are not anticipated, which may result in unexpected behaviour; and because such changes can give the adversary access to code that otherwise would not have been executed. This is an easy to exploit vulnerability. 
 
 
-##For the .NET (and C or C++) coders among us
+## For the .NET (and C or C++) coders among us
 ![Author](https://img.shields.io/badge/Author-Sven.Meuleman-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171226-lightgrey.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
@@ -38,7 +38,7 @@ The reason why this happens is because java uses a By-Reference way of handling 
 In the example when passing the birthday does not pass the value of the birthday attribute but passes the location in the memory of it, hence why it is mutable.
 The cloning option works great for handling this, but you have to keep it in mind.
 
-.NET offers another way of handling things like this, with structs (basically cut down classes imagine classes that don’t support inheritance or finalizers).
+.NET offers another way of handling things like this, with structs (basically cut down classes imagine classes that don't support inheritance or finalizers).
 Structs are passed around by Value not by Reference.  
 
 In this case would be creating a ```Struct Person``` be sufficient to stop this behavior under .NET.
