@@ -43,5 +43,16 @@ Structs are passed around by Value not by Reference.
 
 In this case would be creating a ```Struct Person``` be sufficient to stop this behavior under .NET.
 
+## ByRef / ByVal
+![Author](https://img.shields.io/badge/Author-Jurgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20170104-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
+Probably extremely dated, is this comparable to the ByRef and ByVal you used to declare for parameters in Visual Basic.
+Small Example:
 
+    Sub Example(ByVal clone As String, ByRef normal As Stringe)
+        ...
+    End Sub
+    
