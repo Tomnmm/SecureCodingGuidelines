@@ -52,7 +52,7 @@ In this case would be creating a ```Struct Person``` be sufficient to stop this 
 Probably extremely dated, is this comparable to the ByRef and ByVal you used to declare for parameters in Visual Basic.
 Small Example:
 
-    Sub Example(ByVal clone As String, ByRef normal As Stringe)
+    Sub Example(ByVal clone As String, ByRef normal As String)
         ...
     End Sub
     
