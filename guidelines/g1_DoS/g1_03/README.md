@@ -50,7 +50,7 @@ The safe version (``checkGrowBySafe``) prevents this by subtracting extra from m
 ![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171231-lightgrey.svg)
 
-Interesting and maybe useful in a debug mode, but it  makes me think about [g0_00](../../g0_Fundamentals/g0_00) (Prefer to have obviously no flaws rather then no obvious flaws). Or is this just me?
+Interesting and maybe useful in a debug mode, but it  makes me think about [g0_00](../../g0_Fundamentals/g0_00) (Prefer to have obviously no flaws rather than no obvious flaws). Or is this just me?
 
 ## AddExact()
 ![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
