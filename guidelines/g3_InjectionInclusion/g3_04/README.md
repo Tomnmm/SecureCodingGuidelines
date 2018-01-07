@@ -12,11 +12,11 @@ This example illustrated a possible outcome of bad (or no) input validation when
 
 An, unfortunately, fairly common practice is to read files based on user input (think the filename of an image or the likes). When that input is not sufficiently validated and sanitized, unpleasant things might happen.
 
-In the example, a simple textfile is created that represents a valid file. The file is then cat'ed and output is returned (I know, this should be done using pure java instead of a system call, but it is an example of bad coding for a reason).
+In the example, a simple textfile is created that represents a valid file. The file is then concatenated and printed on the standard output (I know, this should be done using pure java instead of a system call, but it is an example of bad coding for a reason).
 
 When giving the user control over the parameters to cat (the filename in this case), he/she can try to access other than intended files.
 
 `safeExecCmd` validates input using a fairly strict regular expression. If the argument doesn't match the pattern, the command isn't executed.
 
 ### NOTE
-> **This example is written for a linux environment. A windows user that knows what he/she is doing can update it for that OS if they want to.**
+> **This example is written for a linux environment. A windows user that knows what he/she is doing can update it for that OS if wanted.**
