@@ -33,5 +33,6 @@ Where possible make methods for operations that make sense in the context of the
 ## Classic getters/setters?
 ![Author](https://img.shields.io/badge/Author-Robin.Peiremans-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20180101-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
 
 This looks like the classic use of getters and setters to access an object's data, or am I missing something here?
