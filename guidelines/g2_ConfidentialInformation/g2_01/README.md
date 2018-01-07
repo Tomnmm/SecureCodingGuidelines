@@ -27,4 +27,4 @@ The ```safe``` method catches the ```FileNotFoundException``` and returns a gene
 
 The ```unsafe``` version catches the error and sends it to the caller unmodified. This could allow an attacker to check for file existence and provide the filename that should have been opened.
 
-While the ```safe``` method is safe in the sense that it will not divulge any potentially usefull information to an attacker, it will make debugging the code significantly harder.
+While the ```safe``` method is safe in the sense that it will not divulge any potentially useful information to an attacker, it will make debugging the code significantly harder.
