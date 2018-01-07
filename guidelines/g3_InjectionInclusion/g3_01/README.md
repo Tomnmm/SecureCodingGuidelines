@@ -15,5 +15,5 @@ Use well-tested libraries instead of ad hoc code. There are many libraries for c
 ![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20180102-lightgrey.svg)
 
-- Do changes to input before you validate? Knowingly handeling untrusted data, 
-- Use known and trusted libraries instead of "discovering warm watter"
+- Do changes to input before you validate? Knowingly handling untrusted data? 
+- Use known and trusted libraries instead of "discovering warm water"
