@@ -30,5 +30,5 @@ The good example uses prepared statements with bind variables to mitigate this v
 
 ![Editor](https://img.shields.io/badge/Author-Sven.Meuleman-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171224-lightgrey.svg)
-Changed the way the results are printed. Both bad and good example use the same code to print to screen. Best practice don't duplicate code, write once use many could be applied here.
-Meanwhile added code that check's if the ResultSet is not empty.
+Changed the way the results are printed. Both bad and good example use the same code to print to screen. Best practice "don't duplicate code; write once, use many" could be applied here.
+Meanwhile added code that checks if the ResultSet is not empty.
