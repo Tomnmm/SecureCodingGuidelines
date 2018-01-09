@@ -26,11 +26,23 @@ A typical code pattern that can block further processing of unexpected floating 
 
 [2]: http://www.oracle.com/technetwork/java/seccodeguide-139067.html#ref-2
 
-# Example of Injection of Exceptional Floating Point Values
+## Example of Injection of Exceptional Floating Point Values
 ![Author](https://img.shields.io/badge/Author-Manu.DeWitte-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171020-lightgrey.svg)
 ![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-YES-green.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
-Run be.howest.ti.secure.development.g3.g09.InputOfExceptionalFloatingPointValues to play around with valid double values like NaN, Infinity or -Infinity.
+Run `be.howest.ti.secure.development.g3.g09.InputOfExceptionalFloatingPointValues` to play around with valid double values like NaN, Infinity or -Infinity.
+
+## A simple working example of the snippet provided in the original text  
+![Author](https://img.shields.io/badge/Author-Ben-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180110-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+To see the snippet in action run `be.howest.ti.secure.development.g3.g09.DivideTwoDoubles`
+
+> Useful examples to test:  
+> Number 1 = 0.0 & Number 2 = 0. The result will be NaN.  
+> Number 1 = 2.0 & Number 2 = 0. The result will be Infinity.
