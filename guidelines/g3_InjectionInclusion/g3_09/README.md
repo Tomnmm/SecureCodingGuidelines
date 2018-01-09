@@ -41,8 +41,8 @@ Run `be.howest.ti.secure.development.g3.g09.InputOfExceptionalFloatingPointValue
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
-To see the snippet in action run `be.howest.ti.secure.development.g3.g09.DivideTwoDoubles`
+To see the snippet in action run `be.howest.ti.secure.development.g3.g09.DivideTwoDoubles`  
 
-> Useful examples to test:  
+Useful examples to test:  
 > Number 1 = 0.0 & Number 2 = 0. The result will be NaN.  
 > Number 1 = 2.0 & Number 2 = 0. The result will be Infinity.
