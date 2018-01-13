@@ -9,6 +9,10 @@ import java.lang.reflect.Field;
 public class OnePlusOneEqualsFour {
 
     public static void main(String[] args) throws Exception {
+        // Added by Jürgen
+        // Like Manu hinted Setting the securitymanager gives, java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+        // System.setSecurityManager(new SecurityManager());
+
         Integer one = 1;
 
         new MaliciousThirdPartyClass().naughtyCall();
