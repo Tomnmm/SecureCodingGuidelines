@@ -54,6 +54,11 @@ In some cases, notably collections, a method may require a deeper copy of an inp
 Constructors should complete the deep copy before assigning values to a field. An object should never be in a state where it references untrusted data, even briefly. Further, objects assigned to fields should never have referenced untrusted data due to the dangers of unsafe publication.
 
 ## Deep Copy Using Serialization
+![Author](https://img.shields.io/badge/Author-Ben-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180114-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
 An easy (alternative) way to make a deep copy is through serialization. 
 
     import java.io.*
