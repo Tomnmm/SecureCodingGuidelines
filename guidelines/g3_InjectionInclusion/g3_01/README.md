@@ -10,10 +10,11 @@ If the input string has a particular format, combining correction and validation
 
 Use well-tested libraries instead of ad hoc code. There are many libraries for creating XML. Creating XML documents using raw text is error-prone. For unusual formats where appropriate libraries do not exist, such as configuration files, create classes that cleanly handle all formatting and only formatting code.
 
-## Question: Are these 2 different guidelines for the price of 1? 
-
+## ExampleG3G01
 ![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
-![Date](https://img.shields.io/badge/Date-20180102-lightgrey.svg)
+![Date](https://img.shields.io/badge/Date-20180114-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
-- Do changes to input before you validate? Knowingly handling untrusted data? 
-- Use known and trusted libraries instead of "discovering warm water"
+Very Quick and Simple Example of input with and without  validation.
