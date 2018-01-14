@@ -1,5 +1,6 @@
 /*
  * @author Robin Peiremans <robin.peiremans@student.howest.be>
+ * Modified by Ben
  */
 
 package be.howest.ti.secure.development.g6.g04;
@@ -16,7 +17,7 @@ public class Example {
         birthday.set(1970, Calendar.JANUARY, 1);
 
         // Create the original person
-        Person p1 = new Person("Person1", birthday.getTime());
+        Person p1 = new Person("Person1", birthday);
 
         // Now create a copy using the copy constructor
         Person p1CopyConstructor = new Person(p1);
