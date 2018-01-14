@@ -1,13 +1,13 @@
 package be.howest.ti.secure.development.g6.g04;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public final class Person {
     public String name;
-    public Date birthday;
+    public Calendar birthday;
 
     // Regular constructor
-    public Person(String name, Date birthday) {
+    public Person(String name, Calendar birthday) {
         this.name = name;
         this.birthday = birthday;
     }
@@ -33,7 +33,7 @@ public final class Person {
         return name;
     }
 
-    public Date getBirthday() {
+    public Calendar getBirthday() {
         return birthday;
     }
 }
