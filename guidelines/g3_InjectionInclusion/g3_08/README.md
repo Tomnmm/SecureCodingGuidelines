@@ -12,3 +12,12 @@ Code can be hidden in a number of places. If the source is not trusted to supply
 - RMI may allow loading of remote code specified by remote connection. On the Oracle JDK, this is disabled by default but may be enabled or disabled through the java.rmi.server.useCodebaseOnly system property.
 - LDAP (RFC 2713) allows loading of remote code in a server response. On the Oracle JDK, this is disabled by default but may be enabled or disabled through the com.sun.jndi.ldap.object.trustURLCodebase system property.
 - Many SQL implementations allow execution of code with effects outside of the database itself.
+
+## Question
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180115-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+Is this comparable to g0_03 by restricting code to the least privileges needed, using SecurityManager. Or are there other best practices in creating a sandbox?
