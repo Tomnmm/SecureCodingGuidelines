@@ -86,3 +86,10 @@ A more robust, but also more verbose, approach is to use a "pointer to implement
             }
         }
 
+##Just Remember
+![Author](https://img.shields.io/badge/Author-Sven.Meuleman-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180115-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+A constructor exception does not always destroy the object.
