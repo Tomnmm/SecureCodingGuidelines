@@ -17,7 +17,7 @@ The above guidelines on input objects apply when returned from untrusted objects
 
 ## ExampleG6G07
 ![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
-![Date](https://img.shields.io/badge/Date-20180114-lightgrey.svg)
+![Date](https://img.shields.io/badge/Date-20180115-lightgrey.svg)
 ![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)

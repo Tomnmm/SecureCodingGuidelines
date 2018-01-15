@@ -36,3 +36,12 @@ Where possible make methods for operations that make sense in the context of the
 ![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
 
 This looks like the classic use of getters and setters to access an object's data, or am I missing something here?
+
+## ExampleG6G08
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180115-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+I've quickly put the code example into executable code,
