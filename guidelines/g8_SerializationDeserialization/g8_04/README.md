@@ -97,3 +97,12 @@ If a serializable class enables internal state to be retrieved by a caller and t
                 out.writeObject(value);
             }
         }
+
+## ExampleG8G04
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180116-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+Duplicate Security Manager check at the start of deserialization,
