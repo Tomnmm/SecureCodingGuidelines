@@ -1,5 +1,6 @@
 # OBJECT-2: Prevent the unauthorized construction of sensitive classes
 ![Author](https://img.shields.io/badge/Author-Oracle-blue.svg)
+![UKN](https://img.shields.io/badge/UKN-Robin.Peiremans-red.svg)
 
 
 Where an existing API exposes a security-sensitive constructor, limit the ability to create instances. A security-sensitive class enables callers to modify or circumvent SecurityManager access controls. Any instance of ClassLoader, for example, has the power to define classes with arbitrary security permissions.

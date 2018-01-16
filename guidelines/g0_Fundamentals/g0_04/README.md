@@ -30,3 +30,17 @@ the internal value of an Integer object.
 The Java Example will only work with the 256 integers nearest to zero (tiny int), ranging from -128 to 127, because autoboxing is only applied for those integers.
 
 If you use in the example 200 instead of 1, the example will not work anymore. 
+
+![Author](https://img.shields.io/badge/Author-Sven.Meuleman-blue.svg)
+![Date](https://img.shields.io/badge/Date-20171223-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+For the example to work both one and i have to have the same value, even numbers within the -128 to 127 range can cause a fail on this proof ov concept. For all to work both one and i have to be the same and need to be in the range of -128 to 127.
+
+![Author](https://img.shields.io/badge/Author-Manu.DeWitte-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180108-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+The autoboxing technique itself is always applied, but the pooling (caching of objects) is indeed limited to the values -128 to 127.

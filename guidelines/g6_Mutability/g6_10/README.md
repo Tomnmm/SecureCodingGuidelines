@@ -11,5 +11,5 @@ Only immutable values should be stored in public static fields. Many types are m
             "Fred", "Jim", "Sheila"
         ));
 
-As per Guideline 6-10, protected static fields suffer from the same problems as their public equivalents.
+As per Guideline [6-9](../g6_09), protected static fields suffer from the same problems as their public equivalents.
 

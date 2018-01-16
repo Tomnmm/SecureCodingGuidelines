@@ -53,4 +53,35 @@ In some cases, notably collections, a method may require a deeper copy of an inp
 
 Constructors should complete the deep copy before assigning values to a field. An object should never be in a state where it references untrusted data, even briefly. Further, objects assigned to fields should never have referenced untrusted data due to the dangers of unsafe publication.
 
+## Deep Copy Using Serialization
+![Author](https://img.shields.io/badge/Author-Ben-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180114-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
+An easy (alternative) way to make a deep copy is through serialization. 
+
+    import java.io.*
+    
+    private static Object deepCopy(Object object) {
+        try {
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            ObjectOutputStream outputStrm = new ObjectOutputStream(outputStream);
+            outputStrm.writeObject(object);
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
+            ObjectInputStream objInputStream = new ObjectInputStream(inputStream);
+            return objInputStream.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }   
+
+**Sourcecode from:**  
+[alvinalexander.com](https://alvinalexander.com/java/java-deep-clone-example-source-code) and 
+[journaldev.com](https://www.journaldev.com/17129/java-deep-copy-object)
+
+**Other interesting webpages about deep coping with serialization:**  
+[javaworld.com](https://www.javaworld.com/article/2077578/learn-java/java-tip-76--an-alternative-to-the-deep-copy-technique.html)  
+[javatechniques.com](http://javatechniques.com/blog/faster-deep-copies-of-java-objects/)   
+[avajava.com](https://www.avajava.com/tutorials/lessons/how-do-i-perform-a-deep-clone-using-serializable.html)

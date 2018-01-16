@@ -8,6 +8,6 @@ Although there may be security checks on direct accesses, there are indirect way
 
 Some apparently global objects are actually local to applet or application contexts. Applets loaded from different web sites will have different values returned from, for example, ``java.awt.Frame.getFrames``. Such static methods (and methods on true globals) use information from the current thread and the class loaders of code on the stack to determine which is the current context. This prevents malicious applets from interfering with applets from other sites.
 
-Mutable statics (see Guideline 6-11) and exceptions are common ways that isolation is inadvertently breached. Mutable statics allow any code to interfere with code that directly or, more likely, indirectly uses them.
+Mutable statics (see Guideline [6-11](../../g6_Mutability/g6_11)) and exceptions are common ways that isolation is inadvertently breached. Mutable statics allow any code to interfere with code that directly or, more likely, indirectly uses them.
 
 Library code can be carefully written such that it is safely usable by less trusted code. Libraries require a level of trust at least equal to the code it is used by in order not to violate the integrity of the client code. Containers should ensure that less trusted code is not able to replace more trusted library code and does not have package-private access. Both restrictions are typically enforced by using a separate class loader instance, the library class loader a parent of the application class loader.

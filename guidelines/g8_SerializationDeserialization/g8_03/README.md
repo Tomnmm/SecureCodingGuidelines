@@ -15,7 +15,7 @@ Default deserialization and ObjectInputStream.defaultReadObject can assign arbit
             private void readObject(
                 java.io.ObjectInputStream in
             ) throws java.io.IOException, ClassNotFoundException {
-                java.io.ObjectInputStreadm.GetField fields =
+                java.io.ObjectInputStream.GetField fields =
                     in.readFields();
                 this.data = ((byte[])fields.get("data")).clone();
             }
@@ -43,7 +43,7 @@ In addition create copies of deserialized mutable objects before assigning them 
             private void readObject(
                 java.io.ObjectInputStream in
             ) throws java.io.IOException, ClassNotFoundException {
-                java.io.ObjectInputStreadm.GetField fields =
+                java.io.ObjectInputStream.GetField fields =
                     in.readFields();
                 this.value = nonnegative(field.get(value, 0));
             }

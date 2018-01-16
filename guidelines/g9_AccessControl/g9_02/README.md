@@ -13,5 +13,5 @@ Callbacks are widespread in object-oriented systems. Examples include the follow
 
 This bridging between callback and security-sensitive operations is particularly tricky because it is not easy to spot the bug or to work out where it is.
 
-When implementing callback types, use the technique described in Guideline 9-6 to transfer context.
+When implementing callback types, use the technique described in Guideline [9-6](../g9_06) to transfer context.
 
