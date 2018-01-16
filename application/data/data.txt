@@ -1,0 +1,61 @@
+Information Systems III
+Information Modeling
+Advanced SQL and Information Exchange
+Software Development III
+Secure Object Oriented Architectures
+Data Mining Techniques
+Statistics and Decision Making
+Privacy and IT Law
+Web Technology SSE
+Java Web Technology
+Advanced JavaScript
+Advanced Web Topics
+User Experience Design
+Web Technology CCCP
+Java Web Technology
+Advanced JavaScript
+Web Security and Honeypot
+Web Technology ICTC
+Java Web Technology
+Advanced JavaScript
+Business Solutions and Digital Marketing
+User Experience Design
+Project II
+Project
+Server Technology I
+Server Operating Systems Concepts
+Windows Server Lab
+Linux Server Lab
+Information Management
+Big Data, Business Intelligence and NoSQL
+Software Development IV
+.NET Technology
+Web and Mobile SSE
+Advanced Server Web
+Mobile Web Apps
+Native Mobile Apps
+Smart Devices
+Network and System Security I
+Network and System Pentesting
+Forensic Analysis
+Software Development and Security
+.NET Technology
+Practical Reverse Engineering and Malware Analysis
+Cybercrime
+Mobile Security
+Mobile Web Apps and Security
+Server Architecture
+Server Operating Systems Concepts
+Software Integration
+Software Implementation and Change Management
+.NET Technology
+Enterprise Information Systems I
+Supply Chain/ERP
+ICT Strategy and Planning
+CRM
+Web and Mobile ICTC
+Advanced Server Web
+Mobile Web Apps
+Smart Devices
+Project III
+International Project
