@@ -19,7 +19,7 @@ public class ExampleAttackG6G12 {
 
         //ExampleG6G12.lstBetter = lstTampered; // ==> Error: Cannot assign a value to final variable lstBetter
 
-        // try to replace the value of the second element
+        // try to replace the value of the first element
         try {
             ExampleG6G12.lstBest.set( 0, "tamper" );
         }catch (UnsupportedOperationException ex){
