@@ -9,10 +9,15 @@ public class ExampleAttackG6G12 {
 
         List lstTampered = Arrays.asList("tamper1","tamper2","...");
         ExampleG6G12.lstAttackable = lstTampered;
-        printLists("Tampered 1");
+        printLists("Tampered lstAttackable 1");
 
         ExampleG6G12.lstAttackable.set(0,"Tampered!!");
-        printLists("Tampered 2");
+        printLists("Tampered lstAttackable 2");
+
+        ExampleG6G12.lstBetter.set(0,"PROBLEM ?!");
+        printLists("Tampered lstBetter 1");
+
+        //ExampleG6G12.lstBetter = lstTampered; // ==> Error: Cannot assign a value to final variable lstBetter
 
     }
 
