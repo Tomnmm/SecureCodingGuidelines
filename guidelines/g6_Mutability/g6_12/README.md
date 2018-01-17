@@ -40,7 +40,7 @@ Example Attack,
 ### Possible problem and solution
 ![Author](https://img.shields.io/badge/Author-Ben-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20180117-lightgrey.svg)
-![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 There is a problem with the **List lstBetter**. 
