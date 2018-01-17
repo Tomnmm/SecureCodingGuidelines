@@ -37,7 +37,7 @@ While a Collection object reference can be made immutable through the final keyw
 
 Example Attack,
 
-### Possible problem
+### Possible problem and solution
 ![Author](https://img.shields.io/badge/Author-Ben-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20180117-lightgrey.svg)
 ![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
@@ -48,3 +48,5 @@ There is a problem with the **List lstBetter**.
 The reference of the list can not be changed to another object anymore. `ExampleG6G12.lstBetter = lstTampered;` will give an error: *Cannot assign a value to final variable lstBetter*.
 
 However it is still possible to change a value of an element in the list itself. `ExampleG6G12.lstBetter.set(0,"PROBLEM ?!");` will contain *[PROBLEM ?!, second, ...]*
+
+Therefore use `Collections.unmodifiableList`.

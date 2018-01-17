@@ -19,12 +19,22 @@ public class ExampleAttackG6G12 {
 
         //ExampleG6G12.lstBetter = lstTampered; // ==> Error: Cannot assign a value to final variable lstBetter
 
+        // try to replace the value of the second element
+        try {
+            ExampleG6G12.lstBest.set( 0, "tamper" );
+        }catch (UnsupportedOperationException ex){
+            System.out.println("-> Error when trying to ExampleG6G12.lstBest.set( 0, \"tamper\" )");
+            ex.printStackTrace(System.out);
+            System.out.println();
+        }
+
     }
 
     private static void printLists(String comment){
         System.out.println(comment);
         System.out.println("lstAttackable: " + ExampleG6G12.lstAttackable.toString());
         System.out.println("lstBetter: " + ExampleG6G12.lstBetter.toString());
+        System.out.println("lstBest: " + ExampleG6G12.lstBest.toString());
         System.out.println();
     }
 }
