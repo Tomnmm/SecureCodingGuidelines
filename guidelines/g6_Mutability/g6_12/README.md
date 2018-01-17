@@ -28,7 +28,7 @@ While a Collection object reference can be made immutable through the final keyw
             }
         }
 
-## ExampleG6G08
+## ExampleG6G12
 ![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20180115-lightgrey.svg)
 ![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
@@ -36,3 +36,15 @@ While a Collection object reference can be made immutable through the final keyw
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 Example Attack,
+
+### Possible problem
+![Author](https://img.shields.io/badge/Author-Ben-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180117-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+There is a problem with the **List lstBetter**. 
+
+The reference of the list can not be changed to another object anymore. `ExampleG6G12.lstBetter = lstTampered;` will give an error: *Cannot assign a value to final variable lstBetter*.
+
+However it is still possible to change a value of an element in the list itself. `ExampleG6G12.lstBetter.set(0,"PROBLEM ?!");` will contain *[PROBLEM ?!, second, ...]*
