@@ -27,4 +27,4 @@ Examples of attacks include:
 
 Quick example of a famous DoS in tomcat, causes a DoS on Java for Business 6 Update 23 and earlier, 5.0 Update 27 and earlier, and 1.4.2_29 and earlier,  http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4476
  
-yes, this is a 7 year old bug witch is long fixed. :)
+yes, this is a 7 year old bug which is long fixed. :)
