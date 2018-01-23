@@ -8,7 +8,7 @@ Classes loaded by different loaders do not have package-private access to one an
 
 ![Author](https://img.shields.io/badge/Author-Sven.Meuleman-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20171226-lightgrey.svg)
-![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Agree](https://img.shields.io/badge/AGREE-1-green.svg)
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 ## Explanation about who can use what from whom
