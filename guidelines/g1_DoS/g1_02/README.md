@@ -77,8 +77,12 @@ Some decorators of resources may themselves be resources that require correct re
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 Don't forget to not only close the file, but in case of a temporary file to also delete it.
+Of course there are lots of other things to considerate when using temp files, for instance:
+-   random filenames
+-   encryption
+-   non shared folder location
 
-You can use he following:
+This example only focuses on the deletion. You can try the following:
 
 ````java
     f = File.createTempFile("temp",".tmp");
@@ -89,7 +93,7 @@ You can use he following:
         fop.flush();
     f.deleteOnExit()
 ````
-or even better
+or even better:
 ````java
     Path tempFile = null;
     tempFile = Files.createTempFile("temp",".tmp");
