@@ -3,6 +3,7 @@ package be.howest.ti.secure.development.g5.g01;
 
 import java.math.BigInteger;
 import java.util.Scanner;
+import java.lang.Math;
 
 /**
  *
@@ -29,10 +30,19 @@ public class IntegerOverflow {
         }
         System.out.println("output without proper handling...");
         System.out.println(number2*number1);
+
         BigInteger bi = BigInteger.valueOf(number1);
         BigInteger bi2 =BigInteger.valueOf(number2);
         System.out.println("output with proper handling...");
         System.out.println(bi2.multiply(bi).floatValue());
+
+        //third option provided in guideline 1-3
+        System.out.println("output with proper handling for int overflow...");
+        try {
+            System.out.println(Math.multiplyExact(number1, number2));
+        }catch (ArithmeticException e){
+                System.out.println("With multiplyExact: " + e);
+        }
     }
 
 }
