@@ -30,3 +30,16 @@ in combination with
         } 
         
 To check whether the input is indeed an integer. 
+
+![Author](https://img.shields.io/badge/Author-BjarneRasera-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180123-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+An other solution could be to trap the integer overflow which was mentioned in g1-03. Make use of addExact, multiplyExact, ...
+
+    try {
+        System.out.println(Math.multiplyExact(number1, number2));
+    }catch (ArithmeticException e){
+            System.out.println("With multiplyExact: " + e);
+    }
