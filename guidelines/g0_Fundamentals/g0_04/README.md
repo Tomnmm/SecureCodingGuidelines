@@ -44,3 +44,9 @@ For the example to work both one and i have to have the same value, even numbers
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 The autoboxing technique itself is always applied, but the pooling (caching of objects) is indeed limited to the values -128 to 127.
+
+![Author](https://img.shields.io/badge/Author-Tom.Loos-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180123-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+If I understand correctly, Java creates a list of -128 to 127 integers in memory, and if an Integer object is created and initialized with one of those numbers, a reference to that memory space is created in the Integer object. If a secondary object is created an initialized with the same value, the reference goes to the same memory space. This has nothing to do with autoboxing, but all with pooling.
