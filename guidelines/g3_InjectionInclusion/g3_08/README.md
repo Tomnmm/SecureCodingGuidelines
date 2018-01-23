@@ -21,3 +21,12 @@ Code can be hidden in a number of places. If the source is not trusted to supply
 ![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
 
 Is this comparable to g0_03 by restricting code to the least privileges needed, using SecurityManager. Or are there other best practices in creating a sandbox?
+
+## ExampleG3G08
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180123-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+Prevent untrusted code from exiting...
