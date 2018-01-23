@@ -67,3 +67,32 @@ Some decorators of resources may themselves be resources that require correct re
                 out.flush();
             }
         }
+        
+
+## Don't forget to delete Temporary Files
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180123-lightgrey.svg)
+![CHECKED BY LECTOR](https://img.shields.io/badge/CHECKED_BY_LECTOR-PENDING-orange.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+Don't forget to not only close the file, but in case of a temporary file to also delete it.
+
+You can use he following:
+
+````java
+    f = File.createTempFile("temp",".tmp");
+        FileOutputStream fop = null;
+        fop = new FileOutputStream(f);
+        String str = "some data";
+        fop.write(str.getBytes());
+        fop.flush();
+    f.deleteOnExit()
+````
+or even better
+````java
+    Path tempFile = null;
+    tempFile = Files.createTempFile("temp",".tmp");
+    BufferedWriter writer = Files.newBufferedWriter(tempFile, Charset.forName("UTF8"), StandardOpenOption.DELETE_ON_CLOSE));
+    // Write is done, so file is deleted on close.
+````
