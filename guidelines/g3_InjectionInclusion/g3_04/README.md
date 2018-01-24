@@ -20,3 +20,11 @@ When giving the user control over the parameters to cat (the filename in this ca
 
 ### NOTE
 > **This example is written for a linux environment. A windows user that knows what he/she is doing can update it for that OS if wanted.**
+
+### Bad practice example
+![Author](https://img.shields.io/badge/Author-Jürgen.Taverniers-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180124-lightgrey.svg)
+
+Added a Windows Executable command, and an alternative validation methode.
+
+I've also commented Robin's Linux commands, just to be able to run on Windows. Be free to "uncomment" this :)

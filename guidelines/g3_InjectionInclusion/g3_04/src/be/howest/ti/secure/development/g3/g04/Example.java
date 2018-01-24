@@ -10,7 +10,7 @@ public class Example {
 
     public void run() {
         String command = "cat ";
-        String validFile = "some_valid_file";
+        String validFile = "C:\\temp\\g3_04.txt";       //"some_valid_file";
 
         // Create the file first
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(
@@ -25,13 +25,22 @@ public class Example {
         }
 
         System.out.println("Unsafe:");
-        execCmd(command, validFile);
-        execCmd(command, "/etc/passwd");
+        //---Linux---
+        //execCmd(command, validFile);
+        //execCmd(command, "/etc/passwd");
+        //---Windows---
+        command = "type ";
+        execWinCmd(command, validFile);
+        execWinCmd(command, "C:\\Windows\\System32\\drivers\\etc\\hosts");
 
         System.out.println("");
         System.out.println("Safe:");
-        safeExecCmd(command, validFile);
-        safeExecCmd(command, "/etc/passwd");
+        //---Linux---
+        //safeExecCmd(command, validFile);
+        //safeExecCmd(command, "/etc/passwd");
+        //---Windows---
+        safeExecWinCmd(command, 1);
+        safeExecWinCmd(command, 3);
     }
 
     private void execCmd (String command, String arguments) {
@@ -55,6 +64,29 @@ public class Example {
             System.out.println (e2.getMessage());
         }
     }
+    private void execWinCmd(String cmd, String args){
+        Runtime rt = Runtime.getRuntime();
+        Process proc = null;
+        try {
+            proc = rt.exec("cmd.exe /C " + cmd + " " + args);
+            int result = proc.waitFor();
+            if(result != 0){
+                System.out.println("Error: " + result);
+            }
+            InputStream in = (result == 0) ? proc.getInputStream() : proc.getErrorStream();
+            int c;
+            while((c = in.read()) != -1){
+                System.out.print((char) c);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println();
+    }
 
     private void safeExecCmd (String command, String arguments) {
         String regex = "^[a-zA-Z0-9_\\\\.-]+$";
@@ -63,6 +95,26 @@ public class Example {
             execCmd(command, arguments);
         } else {
             System.out.println("illegal argument");
+        }
+    }
+    private void safeExecWinCmd(String cmd, int input){
+        // you can sanitize the arguments, just the same way as Robin.
+        // I just wanted to do an alternative
+        String args = null;
+        switch (input){
+            case 1:
+                args = "C:\\temp\\g3_04.txt";
+                break;
+            case 2:
+                args = "C:\\temp\\g3_04_bis.txt";
+                break;
+            default:
+                break;
+        }
+        if(args == null){
+            System.out.printf("Illegal argument");
+        }else{
+            execWinCmd(cmd, args);
         }
     }
 }
