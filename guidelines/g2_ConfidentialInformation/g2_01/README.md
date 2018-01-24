@@ -28,3 +28,28 @@ The ```safe``` method catches the ```FileNotFoundException``` and returns a gene
 The ```unsafe``` version catches the error and sends it to the caller unmodified. This could allow an attacker to check for file existence and provide the filename that should have been opened.
 
 While the ```safe``` method is safe in the sense that it will not divulge any potentially useful information to an attacker, it will make debugging the code significantly harder.
+
+![Author](https://img.shields.io/badge/Author-Manu.DeWitte-blue.svg)
+![Date](https://img.shields.io/badge/Date-20180124-lightgrey.svg)
+
+Note that in the `safe()` method in this particular example only a `FileNotFoundException` is caught. The documentation for the `FileInputStream` constructor states that also a `SecurityException` could be thrown. If such an exception were thrown, that exception would not be caught and the file location would still be revealed. So in a real application, at some point in your code you would also catch that exception probably by catching any `Exception` (not `Throwable` as this is usually bad practice).
+
+FYI: the class hierarchy:
+
+`Throwable`  
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Error`  
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+`Exception`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`RuntimeException`   
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&#124;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`SecurityException`  
+&#124;  
+`IOException`  
+&#124;  
+`FileNotFoundException`
+
+Changed the code to use try-with-resources.
