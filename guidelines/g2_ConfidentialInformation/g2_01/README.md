@@ -32,7 +32,7 @@ While the ```safe``` method is safe in the sense that it will not divulge any po
 ![Author](https://img.shields.io/badge/Author-Manu.DeWitte-blue.svg)
 ![Date](https://img.shields.io/badge/Date-20180124-lightgrey.svg)
 
-Note that in the `safe()` method in this particular example only a `FileNotFoundException` is caught. The documentation for the `FileInputStream` constructor states that also a `SecurityException` could be thrown. If such an exception were thrown, that exception would not be caught and the file location would still be revealed. So in a real application, at some point in your code you would also catch that exception probably by catching any `Exception` (not `Throwable` as this is usually bad practice).
+Note that in the `safe()` method in this particular example only a `FileNotFoundException` is caught. The documentation for the `FileInputStream` constructor states that also a `SecurityException` could be thrown. If such an exception were thrown, that exception would not be caught and the file location would still be revealed. So in a real application, at some point in your code you would also catch that exception probably by catching any `Exception` (not `Throwable` as this is usually bad practice). Try it by adding `System.setSecurityManager(new SecurityManager());` at the beginning of the `safe()` method.
 
 FYI: the class hierarchy:
 
