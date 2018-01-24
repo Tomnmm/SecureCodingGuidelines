@@ -57,4 +57,4 @@ int count = Integer.parseUnsignedInt(quantity);
 ````
 and/or validate using Document Type Definition or Schema.
 
-[source](https://wiki.sei.cmu.edu/confluence/display/java/IDS16-J.+Prevent+XML+Injection)
+[source](https://wiki.sei.cmu.edu/confluence/display/java/IDS16-J.+Prevent+XML+Injection) 
