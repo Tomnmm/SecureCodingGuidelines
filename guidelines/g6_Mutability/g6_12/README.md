@@ -50,3 +50,13 @@ The reference of the list can not be changed to another object anymore. `Example
 However it is still possible to change a value of an element in the list itself. `ExampleG6G12.lstBetter.set(0,"PROBLEM ?!");` will contain *[PROBLEM ?!, second, ...]*
 
 Therefore use `Collections.unmodifiableList`.
+
+![Author](https://img.shields.io/badge/Author-Manu.DeWitte-blue.svg)
+![Date](https://img.shields.io/badge/Date-20170124-lightgrey.svg)
+![Agree](https://img.shields.io/badge/AGREE-0-green.svg)
+![Disagree](https://img.shields.io/badge/DISAGREE-0-red.svg)
+
+Or use the JDK 9 List.of() factory method: `List.of("first", "second", "...")`.
+
+https://docs.oracle.com/javase/9/docs/api/java/util/List.html#of-E...-
+ 
